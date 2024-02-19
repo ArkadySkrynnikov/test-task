@@ -1,21 +1,32 @@
-import React, { FunctionComponent, ReactElement, useState } from 'react';
+import React, {
+  Dispatch,
+  FunctionComponent,
+  ReactElement,
+  SetStateAction,
+  useState,
+} from 'react';
 import { ChoiceGroup } from '@consta/uikit/ChoiceGroup';
-import { choiseGroupItems } from '../../consts/choiseGroupItems';
-import { choiceGroupWrapperProps } from '../../types/choiceGroup';
+import { currency } from '../../types/choiceGroup';
+import { currencies } from '../../consts/currencies';
 
-const items = choiseGroupItems
-// export type currencyInChart = "USD" | "EUR" | "YUAN";
+interface choiceGroupWrapperProps {
+  value: currency;
+  setValue: Dispatch<SetStateAction<currency>>;
+}
 
-const ChoiceGroupWrapper: FunctionComponent<choiceGroupWrapperProps> = ({value, setValue}): ReactElement => {
-
+const ChoiceGroupWrapper: FunctionComponent<choiceGroupWrapperProps> = ({
+  value,
+  setValue,
+}): ReactElement => {
   return (
     <ChoiceGroup
-      value={}
-      onChange={}
-      items={}
-      getItemLabel={}
+      size={'xs'}
+      value={value}
+      onChange={(value) => setValue(value.value)}
+      items={currencies}
+      getItemLabel={(item) => item.symbol}
       multiple={false}
-      name={"choiceGroupItemsMoney"}
+      name={'choiceGroupItemsMoney'}
     />
   );
 };

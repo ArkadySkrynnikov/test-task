@@ -1,25 +1,7 @@
-import { Dispatch, SetStateAction } from 'react';
+export type currencySymbol = '$' | '€' | '¥';
 
-export interface choiceGroupWrapperProps {
-  value: currencyInChart;
-  setValue: Dispatch<SetStateAction<currencyInChart>>;
-}
-
-export type choiceGroupItem = {
-  moneyType: '$' | '€' | '¥';
-}
-
-export type currencyInChart = "USD" | "EUR" | "YUAN";
-
-
-export interface moneySymbols {
-  USD: '$';
-  EUR: '€';
-  YUAN: '¥';
-}
-
-export interface IMoney {
-  USD: 'Курс доллара';
-  EUR: 'Курс евро';
-  YUAN: 'Курс юаня';
+export interface currency {
+  symbol: currencySymbol;
+  abbr: 'USD' | 'EUR' | 'YUAN';
+  translation: 'Курс доллара' | 'Курс евро' | 'Курс юаня';
 }

@@ -1,0 +1,49 @@
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 400px;
+}
+
+.app_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app_header-title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 20px;
+    color: #002033;
+    margin-left: 5px;
+}
+
+.app_info{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.app_info-average{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.app_loading{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 10px;
+    font-size: 40px;
+    color: #002033;
+    margin-left: 5px;
+}
